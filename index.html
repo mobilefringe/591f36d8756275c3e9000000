@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="app" v-cloak v-if="dataLoaded">
+      <div class="top-bar">
+        <div class="top-bar-left">
+          <ul class="menu">
+            <li class="menu-text">MM with Vue.js!</li>
+            <router-link tag="li" to="/" active-class="active" exact>
+              <a>Home</a>
+            </router-link>
+            <router-link tag="li" to="/stores" active-class="active" exact>
+              <a>Stores</a>
+            </router-link>
+            <router-link tag="li" to="/badlink" active-class="active" exact>
+              <a>404 Example</a>
+            </router-link>
+          </ul>
+        </div>
+        <div class="top-bar-right">
+          <a v-on:click="changeLocale('fr-ca')" v-if="locale === 'en-ca'">FR</a>
+          <a v-on:click="changeLocale('en-ca')" v-if="locale === 'fr-ca'">EN</a>
+        </div>
+      </div>
+      <br/>
+      <router-view></router-view>
+    </div>
+    <script data-main="main" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.3/require.min.js"></script>
+  </body>
+</html>
