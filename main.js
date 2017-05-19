@@ -23,7 +23,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
 
   /* initialize router */
   const router = new VueRouter({
-    mode: 'hash',
+    mode: 'history',
     routes: appRoutes
   });
 
