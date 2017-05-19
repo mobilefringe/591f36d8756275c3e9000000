@@ -1,0 +1,6 @@
+{
+  "message": {
+    "hello": "bonjour",
+    "date": "FR Date: {date}"
+  }
+}
